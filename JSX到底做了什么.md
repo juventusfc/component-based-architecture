@@ -64,7 +64,7 @@ module.exports = {
 };
 ```
 
-## 构建 `createElement()`、`Wrapper` 以及 `Text`
+## 构建 `createElement`、`Wrapper`、`Text` 以及基类 `Component`
 
 我们的环境需要支持大写组件、小谢组件、children、简单文本以及自定义模板。
 
@@ -465,8 +465,9 @@ class MyComponent {
 3. 组件类中与 DOM 关联
 4. DOM 与 HTML 关联
 
-我们现在已经构建好了基础设施：
+通过重构代码，我们现在已经构建好了基础设施：
 
 - `createElement()`： 用于生成 Object，是 JSX 和 JavaScript 之间的桥梁
-- `Wrapper`： 用于包装小写组件
-- `Text`： 用于包装文本
+- `Component`：所有自定义组件的基类
+- `Wrapper`： 用于包装小写组件，继承于 Component
+- `Text`： 用于包装简单文本
