@@ -35,7 +35,7 @@
 在代码中，组成部分可以表示为：
 
 ```javascript
-class Component {
+class MyComponent extends Component { // Inherit
   // Config
   constructor(config) {
     // State
@@ -53,13 +53,23 @@ class Component {
   // Children
   setChildren(){}
   getChildren(){}
+
+  // Lifecycle
+  mounted(){}
+  render(){}
+
+  // Methods
+  go(){}
+
+  // Event
+  handleClick(){}
 }
 
 // Attributes
-<Component attr1="v">
+<MyComponent attr1="v">
   {/* Children*/}
   <div></div>
-</Component>;
+</MyComponent>;
 ```
 
 ### Attributes 和 Properties
@@ -122,9 +132,11 @@ Method 是对象拥有的方法。用户可以调用方法来改变组件。
 
 ![lifecycle](./images/lifecycle.png)
 
+上图是组件的生命周期。
+
 ### Children
 
-children 分为 Content 型和 Template 型。
+Children 分为 Content 型和 Template 型。
 
 ```javascript
 // Content 型
@@ -132,7 +144,7 @@ children 分为 Content 型和 Template 型。
 
 // Template 型。下图中，使用data-xxx 生成多个 li
 <my-list data-xxx>
-    <li><img src="{{icon}}"/>>{title}}
+    <li><img src="{{icon}}"/>{title}}</li>
 </my-list>
 ```
 
@@ -145,14 +157,10 @@ children 分为 Content 型和 Template 型。
 | state     | ×          | ×              | ×                 | √                 |
 | config    | ×          | √              | ×                 | ×                 |
 
-## webpack 和 babel
+## 练手项目
 
-webpack 用于打包 web 资源，使浏览器能调用 web 资源。babel 将新的 JavaScript 语法转化为浏览器可识别的语法。
-
-## JSX
-
-JSX 是 Facebook 发明的类 XML 的 ECMA Script 扩展。它不一定要结合 React 使用，可以单独拿出来给开发者使用。
-
-## webpack-dev-server
-
-webpack-dev-server 是一款实时热加载工具，减少了用户在开发过程中反复手动打命令编译的烦恼。
+- [使用 JSX 构建组件](./使用JSX构建组件.md)
+- 使用 vanilla JavaScript 构建组件
+- 实现一个 animation 库
+- 实现一个 gesture 库
+- 使用 SFC 构建组件

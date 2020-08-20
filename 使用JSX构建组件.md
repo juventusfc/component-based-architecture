@@ -1,5 +1,19 @@
 # 使用 JSX 构建组件
 
+## 搭建环境
+
+- webpack 和 babel
+
+  webpack 用于打包 web 资源，使浏览器能调用 web 资源。babel 将新的 JavaScript 语法转化为浏览器可识别的语法。
+
+- JSX
+
+  JSX 是 Facebook 发明的类 XML 的 ECMA Script 扩展。它不一定要结合 React 使用，可以单独拿出来给开发者使用。
+
+- webpack-dev-server
+
+  webpack-dev-server 是一款实时热加载工具，减少了用户在开发过程中反复手动打命令编译的烦恼。
+
 ## 大写组件的绘制
 
 大写 Div 的时候，createElement 收到的第一个参数是 function。
