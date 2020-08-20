@@ -30,6 +30,10 @@
 
 ![一个 Component 的组成图](./images/whole-component.png)
 
+上图是一个 Component 的组成图。
+
+在代码中，组成部分可以表示为：
+
 ```javascript
 class Component {
   // Config
