@@ -66,6 +66,8 @@ module.exports = {
 
 ## 构建 `createElement()`、`Wrapper` 以及 `Text`
 
+我们的环境需要支持大写组件、小谢组件、children、简单文本以及自定义模板。
+
 ### 支持大写组件
 
 大写 Div 的时候，createElement 收到的第一个参数是 function。
@@ -280,7 +282,7 @@ function createElement(Cls, attributes, ...children) {
 
 ### 支持简单文本
 
-简单文本是可以看作某个元素的 child。但是，JSX 解析到简单文本时，它不会调用 createElement
+JSX 解析到简单文本时，因为它不是 `<></>` 这种形式的，所以它是不会调用 createElement 的。简单文本可以看作某个元素执行 `createElement` 时候的 child，但是它是以字符串的形式传进去，而不是对象形式。
 
 ```javascript
 // 组件调用
@@ -448,7 +450,8 @@ class MyComponent {
 
 综上所述， JSX 自定义组件化的设计思路是：
 
-1. 构建组件类
+1. 构建 `createElement`
+2. 构建组件类
    组件类分为：
 
    - 自定义组件类（大写）
@@ -456,14 +459,14 @@ class MyComponent {
      通过 slot 构建
 
    - 原生组件类
-     - Wrapper（针对小写组件）
-     - Text（针对纯文本）
+     - `Wrapper`
+     - `Text`
 
-2. 组件类中与 DOM 关联
-3. DOM 与 HTML 关联
+3. 组件类中与 DOM 关联
+4. DOM 与 HTML 关联
 
 我们现在已经构建好了基础设施：
 
-- `createElement()`： 用于生成 Object
+- `createElement()`： 用于生成 Object，是 JSX 和 JavaScript 之间的桥梁
 - `Wrapper`： 用于包装小写组件
 - `Text`： 用于包装文本

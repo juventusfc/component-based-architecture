@@ -160,7 +160,7 @@ Children 分为 Content 型和 Template 型。
 ## 练手项目
 
 - [使用 JSX 构建组件](./使用JSX构建组件.md)
-- 使用 vanilla JavaScript 构建组件
+- 使用 vanilla JavaScript 构建 Carousel 组件
 - 实现一个 animation 库
 - 实现一个 gesture 库
 - 使用 SFC 构建组件
