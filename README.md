@@ -163,5 +163,4 @@ Children 分为 Content 型和 Template 型。
 - [使用 vanilla JavaScript 构建 Carousel 组件](./使用vanilla-JavaScript构建Carousel组件.md)
 - 实现一个 animation 库
 - 实现一个 gesture 库
-- 使用 JSX 构建 Carousel 组件
 - 使用 SFC 构建组件
