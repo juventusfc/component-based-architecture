@@ -22,7 +22,10 @@
    />
    ```
 
-3. 新建 VanillaCarousel 组件。TODO
+3. 新建 VanillaCarousel 组件
+   - 代码逻辑参考 [vanilla-carousel-component](https://github.com/juventusfc/vanilla-carousel-component)
+   - 改造 Wrapper，让它具备更多与原生 DOM 关联的东西
+   - 使用 `render()` + `mountTo` 的方式，将 VanillaCarousel 与 DOM 关联起来
 
 ## 构建 Carousel 组件 -- 使用 animation 库和 gesture 库
 
